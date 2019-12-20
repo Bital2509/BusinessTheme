@@ -1,0 +1,714 @@
+@import "fonts";
+
+body {
+  margin: 0;
+  background: white;
+}
+
+header {
+  height: 95px;
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu {
+    width: 648px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 13.5px;
+    font-family: Lato-Regular;
+  }
+}
+
+.section {
+  margin: 0 200px;
+
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 108px;
+  }
+}
+
+.banner-background {
+  background: #709dca;
+  position: relative;
+}
+
+.carousel {
+  position: absolute;
+  top: 309px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .banner-nout {
+    position: relative;
+  }
+
+  .inner-img {
+    position: absolute;
+    top: 19px;
+    width: 0;
+    height: 0;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &_active {
+      width: 445px;
+      height: 246px;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: 100;
+    }
+  }
+}
+
+.dots {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .dot {
+    margin: 0 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px #dedfe0 solid;
+
+    &_active {
+      border: 1px blue solid;
+    }
+  }
+}
+
+.banner {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .banner-text {
+    color: white;
+    text-align: center;
+
+    .title {
+      margin-top: 110px;
+      font-size: 35px;
+      font-family: "Lato Black";
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: 16px;
+      font-family: Lato-Regular;
+    }
+  }
+
+  .banner-form {
+    width: 100%;
+    margin-top: 33px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+
+    input {
+      box-sizing: border-box;
+      height: 45px;
+      font-size: 13px;
+      font-family: Myriad Pro;
+      padding: 0 0 0 41px;
+      width: 260px;
+      border: 0;
+      border-radius: 2px;
+    }
+
+    .name {
+      position: relative;
+    }
+
+    .human-img {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    .email {
+      position: relative;
+    }
+
+    .letter-img {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    .phone {
+      position: relative;
+    }
+
+    .phone-img {
+      position: absolute;
+      left: 15px;
+      top: 16px;
+    }
+
+    button {
+      color: white;
+      box-sizing: border-box;
+      width: 200px;
+      height: 45px;
+      border: 0;
+      border-radius: 2px;
+      background: #ffbb42;
+      font-size: 14px;
+      font-family: Myriad Pro;
+    }
+  }
+}
+
+.service {
+  margin-top: 203px;
+  justify-items: center;
+
+  .service-title {
+    grid-column: 1/span 2;
+    font-size: 30px;
+    font-family: "Lato Black";
+    font-weight: bold;
+  }
+
+  .service-text {
+    grid-column: 1/span 2;
+    font-size: 16px;
+    font-family: Lato;
+    margin-bottom: 90px;
+  }
+}
+
+.block {
+  grid-column-end: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  &_1-of-2 {
+    grid-column-end: span 1;
+  }
+}
+
+.service-block-info {
+  margin-left: 39px;
+  font-family: Lato;
+
+  .info-title {
+    margin-bottom: 21px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .info-text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+.service-img {
+  width: 50px;
+  min-width: 50px;
+}
+
+.aboutUs-background {
+  margin-top: 155px;
+  background: #ffc155;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.aboutUs {
+  grid-column: 2/ span 1;
+  height: 527px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  color: white;
+
+  .aboutUs-title {
+    font-size: 30px;
+    font-family: "Lato Black";
+    font-weight: bold;
+  }
+
+  .aboutUs-text {
+    font-size: 13px;
+    font-family: Lato;
+    line-height: 24px;
+    margin: 33px 0;
+  }
+
+  button {
+    width: 145px;
+    height: 50px;
+    background: #ffc155;
+    border: 1px #e7ad48 solid;
+    color: white;
+    font-weight: bold;
+    font-family: Lato;
+  }
+}
+
+.uPrice-background {
+  background: #e7edf3;
+}
+
+.uPrice {
+  height: 900px;
+  grid-column: 1/ span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .uPrice-title {
+    font-size: 30px;
+    font-family: "Lato Black";
+    font-weight: bold;
+  }
+
+  .uPrice-text {
+    font-size: 18px;
+    font-family: Lato;
+  }
+}
+
+.uPrice-cards {
+  height: 600px;
+  margin-top: 79px;
+  display: flex;
+  align-items: center;
+  width: -webkit-fill-available;
+
+  .card {
+    color: #ccd5df;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    width: calc(100% / 3);
+    height: 450px;
+    padding: 50px 31px;
+    background: white;
+    border: 1px #ccd5df solid;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+    .card-title {
+      color: black;
+      font-size: 25px;
+      font-family: Lato;
+    }
+
+    .card-account {
+      font-size: 13.5px;
+    }
+
+    .card-support {
+      font-size: 13.5px;
+    }
+
+    .card-cloud {
+      font-size: 13.5px;
+    }
+
+    button {
+      border: 0;
+      padding: 15px;
+      background: #ffbb42;
+      margin-top: 35px;
+      color: white;
+    }
+
+    hr {
+      width: 100%;
+      border: 0;
+      background: #ccd5df;
+      height: 1px;
+    }
+
+    &:hover {
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+      background: #709dca;
+      height: 500px;
+      color: white;
+
+      .card-title {
+        color: white;
+      }
+
+      .card-price {
+        color: white;
+
+        .price {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Lato;
+  margin: 30px 0;
+  color: black;
+
+  .price {
+    color: #ffbb42;
+    font-size: 60px;
+  }
+
+  .month {
+    font-size: 15px;
+  }
+}
+
+.HowItWorks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 850px;
+
+  .works-title {
+    font-size: 30px;
+    font-family: "Lato Black";
+    font-weight: bold;
+  }
+
+  .works-text {
+    font-size: 18px;
+    font-family: Lato;
+  }
+
+  button {
+    padding: 16px 27px;
+    background: #e7ad48;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+  }
+}
+
+.works-step {
+  margin: 72px 0 91px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  .card-arrow {
+    top: 100px;
+    width: 75%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.step-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  .step {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.step-info {
+  font-family: Lato;
+  text-align: center;
+
+  .step-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 28px;
+  }
+
+  .step-text {
+    font-size: 13px;
+  }
+}
+
+.happyClients-background {
+  background: #ffc155;
+  height: 900px;
+  text-align: center;
+
+  .section_grid {
+    grid-column-gap: 36px;
+  }
+
+  .happy-title {
+    margin-top: 151px;
+    grid-column: 1/ span 2;
+    font-size: 30px;
+    font-family: "Lato Black";
+    font-weight: bold;
+    color: white;
+  }
+
+  .happy-text {
+    grid-column: 1/ span 2;
+    font-size: 16px;
+    font-family: Lato;
+    color: white;
+    margin-bottom: 58px;
+  }
+}
+
+.client-comment {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 33px 40px 51px 20px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  .client {
+    margin-left: 35px;
+    text-align: left;
+
+    .comment {
+      font-size: 13px;
+      line-height: 22px;
+      position: relative;
+
+      .first {
+        position: absolute;
+        left: -20px;
+        top: 0px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .second {
+        bottom: -9px;
+        position: absolute;
+        font-size: 25px;
+        margin-left: 25px;
+        font-weight: bold;
+        transform: scale(-1, 1)
+      }
+    }
+
+    .user {
+      margin-top: 28px;
+      font-size: 14px;
+
+      span {
+        color: #e7ad48;
+      }
+    }
+  }
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .news-title {
+    font-size: 30px;
+    font-family: "Lato Black";
+    font-weight: bold;
+  }
+
+  .news-text {
+    font-size: 16px;
+    font-family: Lato;
+  }
+}
+
+.news-input {
+  margin-top: 38px;
+  display: flex;
+
+  input {
+    padding: 5px 5px 5px 45px;
+    height: 45px;
+    box-sizing: border-box;
+  }
+
+  .name {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .first {
+      width: 300px;
+    }
+
+    .human-img {
+      position: absolute;
+      left: 15px;
+    }
+  }
+
+  .letter {
+    margin: 0 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .second {
+      width: 380px;
+    }
+
+    .letter-img {
+      position: absolute;
+      left: 15px;
+    }
+  }
+
+
+  button {
+    width: 218px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0;
+    background: #ffbb42;
+    color: white;
+  }
+}
+
+.news-map {
+  margin-top: 53px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px #e3e7ec solid;
+  padding-bottom: 53px;
+
+  .address {
+    color: white;
+    top: 20px;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #394b50;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .address-title {
+      font-size: 15px;
+      font-family: "Lato Black";
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    .address-text {
+      text-align: center;
+      font-size: 13px;
+      line-height: 24px;
+
+      .email {
+        color: #ffbb42;
+      }
+    }
+  }
+
+  .triangle {
+    top: 288px;
+    position: absolute;
+    border: 29px solid transparent;
+    border-top: 50px solid #394b50;
+  }
+
+  .logo {
+    position: absolute;
+    top: 339px;
+  }
+}
+
+.bottom-menu {
+  margin-top: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .menu {
+    width: 720px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: Lato;
+    font-weight: bold;
+  }
+
+  .number {
+    margin-top: 31px;
+    margin-bottom: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 23px;
+    font-family: Lato;
+  }
+
+  .social {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer {
+  color: white;
+  margin-top: 53px;
+  height: 50px;
+  background: #709dca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: Lato;
+}
+
+.offset-top-79 {
+  margin-top: 79px;
+}
+
+.offset-top-20 {
+  margin-top: 20px;
+}
+
+.offset-top-minus-190 {
+  margin-top: -190px;
+}
